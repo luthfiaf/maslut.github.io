@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Zen+Dots&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!-- navbar -->
+       <nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 shadow">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+      <!-- <img  alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+      Maslut
+    </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item ">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="football.html">Football</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ibp.html">IBP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutme.html" tabindex="-1" aria-disabled="true">About me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+    <div class="container">
+
+        <header>
+            <h1 class="text-center my-4">Reservation Form</h1>
+            
+        </header>
+
+        <!-- form -->
+        <form id="reservationForm">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <div id="emailHelp" style="color: rgb(184, 184, 184);" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" required>
+                <div id="namehelp" style="color: rgb(184, 184, 184);" class="form-text">We'll never share your name with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions</label>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="sendWhatsAppMessage()">Submit</button>
+        </form>
+
+    </div>
+
+    <!-- js -->
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <!-- js whatsapp -->
+    <script>
+        function sendWhatsAppMessage() {
+            // Ambil data dari form
+            const phoneNumber = "6289602775872"; // Ganti dengan nomor WhatsApp tujuan
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            // Format pesan untuk WhatsApp
+            const textMessage = `Halo, saya ingin melakukan reservasi.\n\nNama: ${name}\nEmail: ${email}\nPesan: ${message}`;
+
+            // Encode pesan untuk URL
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(textMessage)}`;
+
+            // Buka WhatsApp
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "zen dots", "Oswald", "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    color: #ffffff;
+
+}
+
+
+
+
+body {
+    
+     background-color: rgb(3, 6, 19);
+     
+}
+
+/* navbar */
+
+.navbar {
+    background-color: rgb(3, 6, 19);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Agar navbar tetap berada di atas konten */
+
+}
+
+.navbar-brand {
+    padding-left: 20px;
+}
+
+main {
+    padding: 0%;
+    
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+   
+}
+
+/* Styling untuk tombol WhatsApp */
+        .whatsapp-btn {
+            position: fixed; /* Agar tetap di tempat saat scroll */
+            bottom: 20px;    /* Jarak dari bawah halaman */
+            right: 20px;     /* Jarak dari kanan halaman */
+            background-color: #25D366; /* Warna hijau khas WhatsApp */
+            border-radius: 50%;  /* Membuat tombol menjadi bulat */
+            padding: 15px;      /* Ukuran padding */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada tombol */
+            font-size: 24px;    /* Ukuran icon */
+            color: white;       /* Warna ikon */
+            text-align: center; /* Menyelaraskan ikon di tengah */
+            z-index: 999;       /* Menjaga tombol berada di atas konten */
+            transition: all 0.3s ease; /* Efek transisi saat hover */
+        }
+
+        /* footer */
+
+.no-underline {
+       text-decoration: none;  /* Menghapus garis bawah */
+       color: #ffffff; /* Mengubah warna teks menjadi putih (sesuaikan dengan warna footer) */
+   }
+
+   /* Menambahkan efek hover untuk interaksi */
+   .no-underline:hover {
+       color: #25D366; /* Warna hijau khas WhatsApp atau sesuaikan warna sesuai kebutuhan */
+   }
