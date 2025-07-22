@@ -114,9 +114,9 @@
                 <label for="durasi" class="form-label" style="color: seashell;">Durasi Main</label>
                 <select class="form-control" id="durasi" required>
                   <option value="">Pilih</option>
-                    <option value="1">1 Jam</option>
-                    <option value="2">2 Jam</option>
-                    <option value="3">3 Jam</option>
+                    <option value="1 Jam">1 Jam</option>
+                    <option value="2 Jam">2 Jam</option>
+                    <option value="3 Jam">3 Jam</option>
                     <option value="lebih lama">Lebih lama</option>
                 </select>
                 <div class="form-text">*Pilih durasi bermain Anda.</div>
@@ -152,7 +152,7 @@
             const message = document.getElementById('message').value;
 
             // Format pesan untuk WhatsApp
-            const textMessage = `Halo, saya ingin melakukan reservasi lapangan.\n\nNama: ${name}\nOlahraga: ${olahraga}\nLapangan: ${lapangan}\nWaktu dan Jadwal: ${jadwal}\nDurasi: ${durasi}\nKeterangan: ${message}`;
+            const textMessage = `Halo, saya ingin booking Maslut Photography.\n\nNama: ${name}\nOlahraga: ${olahraga}\nLapangan: ${lapangan}\nWaktu dan Jadwal: ${jadwal}\nDurasi: ${durasi}\nKeterangan: ${message}`;
 
             // Encode pesan untuk URL
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(textMessage)}`;
