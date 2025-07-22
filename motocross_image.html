@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBP Football Club</title>
+
+    <!-- css bootstrap -->
+    <link href="bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d93de876f6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MASLUT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="indexLink" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="footballLink" href="football.html">Football</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="clubLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Club</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="ibp.html">IBP FC</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="psbale.html">PS BALE</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="football.html">OTHER</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutmeLink" href="aboutme.html">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contactLink" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Ambil nama halaman saat ini
+    const currentPage = window.location.pathname.split('/').pop();
+
+    // Tentukan id link yang sesuai dengan halaman yang aktif
+    const activeLink = currentPage.split('.')[0] + 'Link';
+
+    // Tambahkan kelas active pada elemen yang sesuai
+    document.getElementById(activeLink).classList.add('active');
+</script>
+     
+
+
+    <div class="container my-4">
+      <h2 class="text-center" style="padding: 20px;">UNCLE HARD ENDURO 2024</h2>
+
+      <!-- Gambar Kolom -->
+      <div class="row">
+        <div class="col-12 col-md-6 mb-2">
+          <img src="img/hard_enduro/motocross(1).JPG" alt="Website Preview" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <img src="img/hard_enduro/motocross(2).JPG" alt="Website Preview" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <img src="img/hard_enduro/motocross(3).JPG" alt="Website Preview" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <img src="img/hard_enduro/motocross(4).JPG" alt="Website Preview" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <img src="img/hard_enduro/motocross(5).JPG" alt="Website Preview" class="img-fluid">
+        </div>
+        <div class="col-12 col-md-6 mb-2">
+          <img src="img/hard_enduro/motocross(6).JPG" alt="Website Preview" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <!-- footer -->
+    <footer class="text-center mt-5">
+      <img src="img/maslut_white.png" alt="Maslut Logo" width="100" height="100">
+      <p>&copy; 2025 Maslut Photography </p>
+      <p> All rights reserved. </p>
+      <a href="https://www.instagram.com/maslut.id/" style="color: rgb(168, 168, 168);">Follow me on Instagram &copy;maslut.id</a>
+    </footer>
+
+</body>
+</html>

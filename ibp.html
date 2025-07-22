@@ -9,85 +9,158 @@
     <link href="bootstrap5/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Zen+Dots&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
 
-</head>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d93de876f6.js" crossorigin="anonymous"></script>
+
+  </head>
 
 <body>
 
     <!-- navbar -->
-       <nav class="navbar navbar-expand-lg navbar-dark  position-sticky top-0 shadow">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Maslut</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item ">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="football.html">Football</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ibp.html">IBP</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutme.html" tabindex="-1" aria-disabled="true">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MASLUT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="indexLink" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="footballLink" href="football.html">Football</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="clubLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Club</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="ibp.html">IBP FC</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="psbale.html">PS BALE</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="football.html">OTHER</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutmeLink" href="aboutme.html">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contactLink" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
+<script>
+    // Ambil nama halaman saat ini
+    const currentPage = window.location.pathname.split('/').pop();
+
+    // Tentukan id link yang sesuai dengan halaman yang aktif
+    const activeLink = currentPage.split('.')[0] + 'Link';
+
+    // Tambahkan kelas active pada elemen yang sesuai
+    document.getElementById(activeLink).classList.add('active');
+</script>
+    
 
 <div class="container">
+  <h2 class="text-center">INTAN BINTANG PRATAMA FC</h2>
 
     <!-- foto -->
      <div class="container my-2">
   <div class="row">
     <!-- Kolom Foto 1 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0245.jpg" class="img-fluid" alt="Foto 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(0)">
+      <img src="img/IBP/IBP1.jpg" class="img-fluid" alt="Foto 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(0)">
     </div>
     <!-- Kolom Foto 2 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0335.jpg" class="img-fluid" alt="Foto 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(1)">
+      <img src="img/IBP/IBP2.jpg" class="img-fluid" alt="Foto 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(1)">
     </div>
     <!-- Kolom Foto 3 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0349.jpg" class="img-fluid" alt="Foto 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(2)">
+      <img src="img/IBP/IBP3.jpg" class="img-fluid" alt="Foto 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(2)">
     </div>
     <!-- Kolom Foto 4 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0471.jpg" class="img-fluid" alt="Foto 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(3)">
+      <img src="img/IBP/IBP4.jpg" class="img-fluid" alt="Foto 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(3)">
     </div>
     <!-- Kolom Foto 5 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0478.jpg" class="img-fluid" alt="Foto 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(4)">
+      <img src="img/IBP/IBP5.jpg" class="img-fluid" alt="Foto 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(4)">
     </div>
     <!-- Kolom Foto 6 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0506.jpg" class="img-fluid" alt="Foto 6" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(5)">
+      <img src="img/IBP/IBP6.jpg" class="img-fluid" alt="Foto 6" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(5)">
     </div>
     <!-- Kolom Foto 7 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0530.jpg" class="img-fluid" alt="Foto 7" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(6)">
+      <img src="img/IBP/IBP7.jpg" class="img-fluid" alt="Foto 7" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(6)">
     </div>
     <!-- Kolom Foto 8 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0536.jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(7)">
+      <img src="img/IBP/IBP8.jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(7)">
     </div>
     <!-- Kolom Foto 9 -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-      <img src="img/IBP/1M6A0571.jpg" class="img-fluid" alt="Foto 9" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(8)">
+      <img src="img/IBP/IBP9.jpg" class="img-fluid" alt="Foto 9" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(8)">
+    </div>
+    <!-- Kolom Foto 10 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP10.jpg" class="img-fluid" alt="Foto 10" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(9)">
+    </div>
+    <!-- Kolom Foto 11 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP11.jpg" class="img-fluid" alt="Foto 11" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(10)">
+    </div>
+    <!-- Kolom Foto 12 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP12.jpg" class="img-fluid" alt="Foto 12" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(11)">
+    </div>
+    <!-- Kolom Foto 13 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP13.jpg" class="img-fluid" alt="Foto 13" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(12)">
+    </div>
+    <!-- Kolom Foto 14 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP14.jpg" class="img-fluid" alt="Foto 14" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(13)">
+    </div>
+    <!-- Kolom Foto 15 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP15.jpg" class="img-fluid" alt="Foto 15" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(14)">
+    </div>
+    <!-- Kolom Foto 16 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP16.jpg" class="img-fluid" alt="Foto 16" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(15)">
+    </div>
+    <!-- Kolom Foto 17 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP17.jpg" class="img-fluid" alt="Foto 17" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(16)">
+    </div>
+    <!-- Kolom Foto 18 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP18.jpg" class="img-fluid" alt="Foto 18" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(17)">
+    </div>
+    <!-- Kolom Foto 19 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP19.jpg" class="img-fluid" alt="Foto 19" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(18)">
+    </div>
+    <!-- Kolom Foto 20 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP20.jpg" class="img-fluid" alt="Foto 20" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(19)">
+    </div>
+    <!-- Kolom Foto 21 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP21.jpg" class="img-fluid" alt="Foto 21" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(20)">
+    </div>
+    <!-- Kolom Foto 22 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/IBP/IBP22.jpg" class="img-fluid" alt="Foto 22" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(21)">
     </div>
   </div>
 </div>
@@ -97,7 +170,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="imageModalLabel">IBP FC</h5>
+        <h5 class="modal-title" id="imageModalLabel" style="color: black;">IBP FC</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -123,15 +196,28 @@
 <script>
   // Array untuk menyimpan semua gambar
   const images = [
-    "img/IBP/1M6A0245.jpg",
-    "img/IBP/1M6A0335.jpg",
-    "img/IBP/1M6A0349.jpg",
-    "img/IBP/1M6A0471.jpg",
-    "img/IBP/1M6A0478.jpg",
-    "img/IBP/1M6A0506.jpg",
-    "img/IBP/1M6A0530.jpg",
-    "img/IBP/1M6A0536.jpg",
-    "img/IBP/1M6A0571.jpg"
+    "img/IBP/IBP1.jpg",
+    "img/IBP/IBP2.jpg",
+    "img/IBP/IBP3.jpg",
+    "img/IBP/IBP4.jpg",
+    "img/IBP/IBP5.jpg",
+    "img/IBP/IBP6.jpg",
+    "img/IBP/IBP7.jpg",
+    "img/IBP/IBP8.jpg",
+    "img/IBP/IBP9.jpg",
+    "img/IBP/IBP10.jpg",
+    "img/IBP/IBP11.jpg",
+    "img/IBP/IBP12.jpg",
+    "img/IBP/IBP13.jpg",
+    "img/IBP/IBP14.jpg",
+    "img/IBP/IBP15.jpg",
+    "img/IBP/IBP16.jpg",
+    "img/IBP/IBP17.jpg",
+    "img/IBP/IBP18.jpg",
+    "img/IBP/IBP19.jpg",
+    "img/IBP/IBP20.jpg",
+    "img/IBP/IBP21.jpg",
+    "img/IBP/IBP22.jpg"
   ];
 
   // Fungsi untuk membuka carousel dan menampilkan gambar yang sesuai
@@ -153,6 +239,13 @@
 
 <source src="bootstrap5/js/bootstrap.bundle.min.js"></source>
 
-
+ <!-- footer -->
+       <footer class="text-center mt-5">
+         <img src="img/maslut_white.png" alt="Maslut Logo" width="100" height="100">
+   <p>&copy; 2025 Maslut Photography </p>
+   <p> All rights reserved. </p>
+   <a  href="https://www.instagram.com/maslut.id/"  style="color: rgb(168, 168, 168);">Follow me on Instagram &copy;maslut.id</a>
+</footer>
+    </div>
 </body>
 </html>

@@ -1,81 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservation Form</title>
+    <title>Formulir Reservasi</title>
     
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <!-- font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Zen+Dots&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
 
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d93de876f6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
-    <!-- navbar -->
-       <nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 shadow">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-      <!-- <img  alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
-      Maslut
-    </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item ">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+     <!-- navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MASLUT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                     <a class="nav-link" id="indexLink" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="football.html">Football</a>
+                    <a class="nav-link" id="footballLink" href="football.html">Football</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="clubLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Club</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="ibp.html">IBP FC</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="psbale.html">PS BALE</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="football.html">OTHER</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="ibp.html">IBP</a>
+                    <a class="nav-link" id="aboutmeLink" href="aboutme.html">About me</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="aboutme.html" tabindex="-1" aria-disabled="true">About me</a>
+                    <a class="nav-link" id="contactLink" href="contact.html">Contact</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <div class="container">
+<script>
+    // Ambil nama halaman saat ini
+    const currentPage = window.location.pathname.split('/').pop();
 
+    // Tentukan id link yang sesuai dengan halaman yang aktif
+    const activeLink = currentPage.split('.')[0] + 'Link';
+
+    // Tambahkan kelas active pada elemen yang sesuai
+    document.getElementById(activeLink).classList.add('active');
+</script>
+    
+
+
+    <!-- reservation form -->
+ <div class="container reservation">
         <header>
-            <h1 class="text-center my-4">Reservation Form</h1>
-            
+            <h1 class="text-center my-4">Silakan diisi untuk Booking!</h1>
         </header>
 
         <!-- form -->
         <form id="reservationForm">
             <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                <div id="emailHelp" style="color: rgb(184, 184, 184);" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="name" class="form-label">Your Name</label>
+                <label for="name" class="form-label" style="color: seashell;">Nama Anda</label>
                 <input type="text" class="form-control" id="name" required>
-                <div id="namehelp" style="color: rgb(184, 184, 184);" class="form-text">We'll never share your name with anyone else.</div>
+                <div class="form-text">*Masukkan nama lengkap Anda.</div>
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
+                <label for="olahraga" class="form-label" style="color: seashell;">Pilih Olahraga</label>
+                <select class="form-control" id="olahraga" required>
+                    <option value="">Pilih</option>
+                    <option value="Minisoccer">Minisoccer</option>
+                    <option value="Futsal">Futsal</option>
+                    <option value="Basket">Basket</option>
+                    <option value="Racing">Racing</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+                <div class="form-text">*Pilih lapangan yang ingin Anda reservasi.</div>
+            </div>
+            <div class="mb-3">
+                <label for="lapangan" class="form-label" style="color: seashell;">Pilih Lapangan</label>
+                <select class="form-control" id="lapangan" required>
+                    <option value="">Pilih</option>
+                    <option value="nando">Nando Minisoccer</option>
+                    <option value="puber">Puber Minisoccer</option>
+                    <option value="palam">Palam Minisoccer</option>
+                    <option value="hbp">HBP Minisoccer</option>
+                    <option value="bfc">BFC Futsal</option>
+                    <option value="fernando">Fernando 2 Futsal</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+                <div class="form-text">*Pilih lapangan yang ingin Anda reservasi.</div>
+            </div>
+            <div class="mb-3">
+                <label for="jadwal" class="form-label" style="color: seashell;">Waktu dan Jadwal</label>
+                <input type="datetime-local" class="form-control" id="jadwal" required>
+                <div class="form-text">*Pilih tanggal dan jam untuk reservasi.</div>
+            </div>
+            <div class="mb-3">
+                <label for="durasi" class="form-label" style="color: seashell;">Durasi Main</label>
+                <select class="form-control" id="durasi" required>
+                  <option value="">Pilih</option>
+                    <option value="1">1 Jam</option>
+                    <option value="2">2 Jam</option>
+                    <option value="3">3 Jam</option>
+                    <option value="lebih lama">Lebih lama</option>
+                </select>
+                <div class="form-text">Pilih durasi bermain Anda.</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label" style="color: seashell;">Keterangan</label>
                 <textarea class="form-control" id="message" rows="3" required></textarea>
+                <div class="form-text">*Tambahkan informasi tambahan jika diperlukan.</div>
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions</label>
+                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">*Saya setuju dengan syarat dan ketentuan</label>
             </div>
-            <button type="button" class="btn btn-primary" onclick="sendWhatsAppMessage()">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="sendWhatsAppMessage()">Kirim</button>
+             <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
 
     </div>
@@ -88,12 +144,15 @@
         function sendWhatsAppMessage() {
             // Ambil data dari form
             const phoneNumber = "6289602775872"; // Ganti dengan nomor WhatsApp tujuan
-            const email = document.getElementById('email').value;
             const name = document.getElementById('name').value;
+            const olahraga = document.getElementById('olahraga').value;
+            const lapangan = document.getElementById('lapangan').value;
+            const jadwal = document.getElementById('jadwal').value;
+            const durasi = document.getElementById('durasi').value;
             const message = document.getElementById('message').value;
 
             // Format pesan untuk WhatsApp
-            const textMessage = `Halo, saya ingin melakukan reservasi.\n\nNama: ${name}\nEmail: ${email}\nPesan: ${message}`;
+            const textMessage = `Halo, saya ingin melakukan reservasi lapangan.\n\nNama: ${name}\nOlahraga: ${olahraga}\nLapangan: ${lapangan}\nWaktu dan Jadwal: ${jadwal}\nDurasi: ${durasi}\nKeterangan: ${message}`;
 
             // Encode pesan untuk URL
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(textMessage)}`;
@@ -103,5 +162,14 @@
         }
     </script>
 
+ <!-- footer -->
+       <footer class="text-center mt-5">
+         <img src="img/maslut_white.png" alt="Maslut Logo" width="100" height="100">
+   <p>&copy; 2025 Maslut Photography </p>
+   <p> All rights reserved. </p>
+   <a  href="https://www.instagram.com/maslut.id/"  style="color: rgb(168, 168, 168);">Follow me on Instagram &copy;maslut.id</a>
+</footer>
+    </div>
+   
 </body>
 </html>

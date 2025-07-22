@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Match</title>
+
+    <!-- css bootstrap -->
+    <link href="bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d93de876f6.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+
+   <!-- navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">MASLUT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="indexLink" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="footballLink" href="football.html">Football</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="clubLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Club</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="ibp.html">IBP FC</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="psbale.html">PS BALE</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="football.html">OTHER</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutmeLink" href="aboutme.html">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contactLink" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Ambil nama halaman saat ini
+    const currentPage = window.location.pathname.split('/').pop();
+
+    // Tentukan id link yang sesuai dengan halaman yang aktif
+    const activeLink = currentPage.split('.')[0] + 'Link';
+
+    // Tambahkan kelas active pada elemen yang sesuai
+    document.getElementById(activeLink).classList.add('active');
+</script>
+     
+
+
+<div class="container">
+  <h2 class="text-center">FOOTBALL MATCH</h2>
+
+    <!-- foto -->
+     <div class="container my-2">
+  <div class="row">
+    <!-- Kolom Foto 1 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(1).jpg" class="img-fluid" alt="Foto 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(0)">
+    </div>
+    <!-- Kolom Foto 2 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(2).jpg" class="img-fluid" alt="Foto 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(1)">
+    </div>
+    <!-- Kolom Foto 3 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(3).jpg" class="img-fluid" alt="Foto 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(2)">
+    </div>
+    <!-- Kolom Foto 4 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(4).jpg" class="img-fluid" alt="Foto 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(3)">
+    </div>
+    <!-- Kolom Foto 5 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(5).jpg" class="img-fluid" alt="Foto 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(4)">
+    </div>
+    <!-- Kolom Foto 6 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(6).jpg" class="img-fluid" alt="Foto 6" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(5)">
+    </div>
+    <!-- Kolom Foto 7 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(7).jpg" class="img-fluid" alt="Foto 7" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(6)">
+    </div>
+    <!-- Kolom Foto 8 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(8).jpg" class="img-fluid" alt="Foto 8" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(7)">
+    </div>
+    <!-- Kolom Foto 9 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(9).jpg" class="img-fluid" alt="Foto 9" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(8)">
+    </div>
+<!-- Kolom Foto 10 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(10).jpg" class="img-fluid" alt="Foto 10" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(9)">
+    </div>
+<!-- Kolom Foto 11 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(11).jpg" class="img-fluid" alt="Foto 11" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(10)">
+    </div>
+<!-- Kolom Foto 12 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(12).jpg" class="img-fluid" alt="Foto 12" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(11)">
+    </div>
+<!-- kolom foto 13 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(13).jpg" class="img-fluid" alt="Foto 13" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(12)">
+    </div>
+<!-- kolom foto 14 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(14).jpg" class="img-fluid" alt="Foto 14" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(13)">
+    </div>
+<!-- Kolom Foto 15 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(15).jpg" class="img-fluid" alt="Foto 15" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(14)">
+    </div>
+<!-- Kolom Foto 16 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(16).jpg" class="img-fluid" alt="Foto 16" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(15)">
+    </div>
+<!-- Kolom Foto 17 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(17).jpg" class="img-fluid" alt="Foto 17" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(16)">
+    </div>
+<!-- Kolom Foto 18 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(18).jpg" class="img-fluid" alt="Foto 18" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(17)">
+    </div>
+<!-- Kolom Foto 19 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(19).jpg" class="img-fluid" alt="Foto 19" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(18)">
+    </div>
+<!-- Kolom Foto 20 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(20).jpg" class="img-fluid" alt="Foto 20" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(19)">
+    </div>
+    <!-- Kolom Foto 21 -->
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(21).jpg" class="img-fluid" alt="Foto 21" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(20)">
+    </div> -->
+    <!-- Kolom Foto 22 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(22).jpg" class="img-fluid" alt="Foto 22" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(21)">
+    </div>
+    <!-- Kolom Foto 23 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(23).jpg" class="img-fluid" alt="Foto 23" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(22)">
+    </div>
+    <!-- Kolom Foto 24 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(24).jpg" class="img-fluid" alt="Foto 24" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(23)">
+    </div>
+    <!-- Kolom Foto 25 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/1/B_(25).jpg" class="img-fluid" alt="Foto 25" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(24)">
+    </div>
+    <!-- Kolom Foto 26 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(26).jpg" class="img-fluid" alt="Foto 26" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(25)">
+    </div>
+    <!-- Kolom Foto 27 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(27).jpg" class="img-fluid" alt="Foto 27" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(26)">
+    </div>
+    <!-- Kolom Foto 28 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(28).jpg" class="img-fluid" alt="Foto 28" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(27)">
+    </div>
+    <!-- Kolom Foto 29 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(29).jpg" class="img-fluid" alt="Foto 29" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(28)">
+    </div>
+    <!-- Kolom Foto 30 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(30).jpg" class="img-fluid" alt="Foto 30" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(29)">
+    </div>
+    <!-- Kolom Foto 31 -->
+    <!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(31).jpg" class="img-fluid" alt="Foto 31" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(30)">
+    </div> -->
+    <!-- Kolom Foto 32 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(32).jpg" class="img-fluid" alt="Foto 32" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(31)">
+    </div>
+    <!-- Kolom Foto 33 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(33).jpg" class="img-fluid" alt="Foto 33" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(32)">
+    </div>
+    <!-- Kolom Foto 34 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(34).jpg" class="img-fluid" alt="Foto 34" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(33)">
+    </div>
+    <!-- Kolom Foto 35 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(35).jpg" class="img-fluid" alt="Foto 35" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(34)">
+    </div>
+    <!-- Kolom Foto 36 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(36).jpg" class="img-fluid" alt="Foto 36" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(35)">
+    </div>
+    <!-- Kolom Foto 37 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(37).jpg" class="img-fluid" alt="Foto 37" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(36)">
+    </div>
+    <!-- Kolom Foto 38 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(38).jpg" class="img-fluid" alt="Foto 38" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(37)">
+    </div>
+    <!-- Kolom Foto 39 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(39).jpg" class="img-fluid" alt="Foto 39" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(38)">
+    </div>
+    <!-- Kolom Foto 40 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(40).jpg" class="img-fluid" alt="Foto 40" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(39)">
+    </div>
+    <!-- Kolom Foto 41 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(41).jpg" class="img-fluid" alt="Foto 41" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(40)">
+    </div>
+    <!-- Kolom Foto 42 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(42).jpg" class="img-fluid" alt="Foto 42" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(41)">
+    </div>
+    <!-- Kolom Foto 43 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(43).jpg" class="img-fluid" alt="Foto 43" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(42)">
+    </div>
+    <!-- Kolom Foto 44 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(44).jpg" class="img-fluid" alt="Foto 44" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(43)">
+    </div>
+    <!-- Kolom Foto 45 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(45).jpg" class="img-fluid" alt="Foto 45" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(44)">
+    </div>
+    <!-- Kolom Foto 46 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(46).jpg" class="img-fluid" alt="Foto 46" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(45)">
+    </div>
+    <!-- Kolom Foto 47 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(47).jpg" class="img-fluid" alt="Foto 47" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(46)">
+    </div>
+    <!-- Kolom Foto 48 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(48).jpg" class="img-fluid" alt="Foto 48" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(47)">
+    </div>
+    <!-- Kolom Foto 49 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <img src="img/2/2/B_(49).jpg" class="img-fluid" alt="Foto 49" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openCarousel(48)">
+    </div>
+  </div>
+</div>
+
+<!-- Modal untuk Gambar Besar dengan Carousel -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel" style="color: black;">FOOTBALL MATCH</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner" id="carouselImages">
+            <!-- Gambar-gambar akan dimasukkan di sini -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Array untuk menyimpan semua gambar
+  const images = [
+    "img/2/1/B_(1).jpg",
+    "img/2/1/B_(2).jpg",
+    "img/2/1/B_(3).jpg",
+    "img/2/1/B_(4).jpg",
+    "img/2/1/B_(5).jpg",
+    "img/2/1/B_(6).jpg",
+    "img/2/1/B_(7).jpg",
+    "img/2/1/B_(8).jpg",
+    "img/2/1/B_(9).jpg",
+    "img/2/1/B_(10).jpg",
+    "img/2/1/B_(11).jpg",
+    "img/2/1/B_(12).jpg",
+    "img/2/1/B_(13).jpg",
+    "img/2/1/B_(14).jpg",
+    "img/2/1/B_(15).jpg",
+    "img/2/1/B_(16).jpg",
+    "img/2/1/B_(17).jpg",
+    "img/2/1/B_(18).jpg",
+    "img/2/1/B_(19).jpg",
+    "img/2/1/B_(20).jpg",
+    // "img/2/1/B_(21).jpg",
+    "img/2/1/B_(22).jpg",
+    "img/2/1/B_(23).jpg",
+    "img/2/1/B_(24).jpg",
+    "img/2/1/B_(25).jpg",
+    "img/2/2/B_(26).jpg",
+    "img/2/2/B_(27).jpg",
+    "img/2/2/B_(28).jpg",
+    "img/2/2/B_(29).jpg",
+    "img/2/2/B_(30).jpg",
+    // "img/2/2/B_(31).jpg",
+    "img/2/2/B_(32).jpg",
+    "img/2/2/B_(33).jpg",
+    "img/2/2/B_(34).jpg",
+    "img/2/2/B_(35).jpg",
+    "img/2/2/B_(36).jpg",
+    "img/2/2/B_(37).jpg",
+    "img/2/2/B_(38).jpg",
+    "img/2/2/B_(39).jpg",
+    "img/2/2/B_(40).jpg",
+    "img/2/2/B_(41).jpg",
+    "img/2/2/B_(42).jpg",
+    "img/2/2/B_(43).jpg",
+    "img/2/2/B_(44).jpg",
+    "img/2/2/B_(45).jpg",
+    "img/2/2/B_(46).jpg",
+    "img/2/2/B_(47).jpg",
+    "img/2/2/B_(48).jpg",
+    "img/2/2/B_(49).jpg"
+
+  ];
+
+  // Fungsi untuk membuka carousel dan menampilkan gambar yang sesuai
+  function openCarousel(index) {
+    const carouselInner = document.getElementById('carouselImages');
+    carouselInner.innerHTML = ''; // Kosongkan konten carousel sebelumnya
+
+    images.forEach((image, i) => {
+      const item = document.createElement('div');
+      item.classList.add('carousel-item');
+      if (i === index) item.classList.add('active'); // Set gambar yang aktif
+      item.innerHTML = `<img src="${image}" class="d-block w-100" alt="Foto ${i+1}">`;
+      carouselInner.appendChild(item);
+    });
+  }
+</script>
+
+</div>
+
+<source src="bootstrap5/js/bootstrap.bundle.min.js"></source>
+
+ <!-- footer -->
+       <footer class="text-center mt-5">
+         <img src="img/maslut_white.png" alt="Maslut Logo" width="100" height="100">
+   <p>&copy; 2025 Maslut Photography </p>
+   <p> All rights reserved. </p>
+   <a  href="https://www.instagram.com/maslut.id/"  style="color: rgb(168, 168, 168);">Follow me on Instagram &copy;maslut.id</a>
+</footer>
+    </div>
+</body>
+</html>

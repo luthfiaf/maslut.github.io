@@ -9,50 +9,72 @@
     <link href="bootstrap5/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="style.css">
 
-    <!-- font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Zen+Dots&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
 
 <!-- font awesome -->
- <script src="https://kit.fontawesome.com/d93de876f6.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/d93de876f6.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
-
-    <!-- navbar -->
-         <nav class="navbar navbar-expand-lg navbar-dark  position-sticky top-0 shadow">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Maslut</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item ">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="football.html">Football</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ibp.html">IBP</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="aboutme.html" tabindex="-1" aria-disabled="true">About me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
-        </li>
-      </ul>
+   <!-- navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark position-sticky top-0 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">MASLUT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="indexLink" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="footballLink" href="football.html">Football</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="clubLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Club</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="ibp.html">IBP FC</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="psbale.html">PS BALE</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="football.html">OTHER</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutmeLink" href="aboutme.html">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contactLink" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
+
+<script>
+    // Ambil nama halaman saat ini
+    const currentPage = window.location.pathname.split('/').pop();
+
+    // Tentukan id link yang sesuai dengan halaman yang aktif
+    const activeLink = currentPage.split('.')[0] + 'Link';
+
+    // Tambahkan kelas active pada elemen yang sesuai
+    document.getElementById(activeLink).classList.add('active');
+</script>
+     
+
+
+
+
 
 <!-- container -->
  
     <div class="container">
+      
         
         
 
@@ -66,22 +88,58 @@
         <main class="justify-content-center text-center my-5">
             <section class="about" id="about-us">
                
-                <p class="text-center">We are a professional photography service dedicated to capturing your special moments.</p>
+                <p class="text-center">I am a professional photography service dedicated to capturing your special moments.</p>
              
                 <a class="btn btn-primary" href="contact.html">Booking Now</a>
 
               </section>
+
+              <!-- carousel 1-->
+
+              <section class="slide2" id="slide2">
+                <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/EAFC26/EAFC26(4).jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/EAFC26/EAFC26(2).jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/EAFC26/EAFC26(3).jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/EAFC26/EAFC26(1).jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+
+            
            
             <section class="foto" id="our-portfolio">
-                
-
         <!-- card -->
 
   <div class="container my-4">
   <div class="row">
     <div class="col-12 col-md-4 mb-4">
       <div class="card" style="width: 18rem; background-color: rgb(14, 18, 41);">
-        <img src="img/IBP/1M6A0245.jpg" class="card-img-top" alt="...">
+        <img src="img/IBP/IBP18.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title" style="color: whitesmoke;">IBP FC</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
@@ -92,22 +150,22 @@
 
    <div class="col-12 col-md-4 mb-4">
       <div class="card" style="width: 18rem; background-color: rgb(14, 18, 41);">
-        <img src="img/IBP/1M6A0245.jpg" class="card-img-top" alt="...">
+        <img src="img/psbale/bale(12).jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title" style="color: whitesmoke;">PS Bale</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-          <a href="ibp.html" class="btn btn-light">Lihat</a>
+          <a href="psbale.html" class="btn btn-light">Lihat</a>
         </div>
       </div>
     </div>
     
     <div class="col-12 col-md-4 mb-4">
       <div class="card" style="width: 18rem; background-color: rgb(14, 18, 41);">
-        <img src="img/IBP/1M6A0245.jpg" class="card-img-top" alt="...">
+        <img src="img/football_2/B_(48).jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title" style="color: whitesmoke;">IBP FC</h5>
+          <h5 class="card-title" style="color: whitesmoke;">Football Match</h5>
           <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-          <a href="ibp.html" class="btn btn-light">Lihat</a>
+          <a href="football.html" class="btn btn-light">Lihat</a>
         </div>
       </div>
     </div>
@@ -115,8 +173,78 @@
   </div>
 </div>
 
+</section>
 
+<!-- container -->
+    <div class="container my-4">
 
+        <h5 class="text-center" style="padding: 2%;">Photography is the art of capturing moments that would otherwise be forgotten, turning them into timeless memories.</h5>
+
+        <!-- Gambar 2 kolom (kanan kiri) di desktop, satu kolom di mobile -->
+        <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="image-container">
+                    <img src="img/hard_enduro/motocross(8).JPG" alt="Website Preview" class="img-fluid">
+                    <div class="overlay">
+                        <a href="motocross_image.html" class="text">UNCLE HARD ENDURO 2024</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="image-container">
+                    <img src="img/hard_enduro/motocross(9).JPG" alt="Website Preview" class="img-fluid">
+                    <div class="overlay">
+                        <a href="motocross_image.html" class="text">VISIT IMAGES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="slide" id="slide">
+              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/cropping/e1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/cropping/e2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/cropping/b1.jpg" class="d-block w-100" alt="...">
+      </div>
+        <div class="carousel-item">
+      <img src="img/cropping/b2.jpg" class="d-block w-100" alt="...">
+      </div>
+        <div class="carousel-item">
+      <img src="img/cropping/c1.jpg" class="d-block w-100" alt="...">
+      </div>
+        <div class="carousel-item">
+      <img src="img/cropping/c2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+            </section>
+
+      <!-- Second Carousel -->
+            
 
 
         <!-- <div class="card-group">
@@ -145,7 +273,10 @@
 
    
 
-            </section>
+
+            
+
+            
 
             <!-- tombol WA -->
 <!-- Tombol WhatsApp mengambang -->
@@ -156,6 +287,7 @@
         </main>
        <!-- footer -->
        <footer class="text-center mt-5">
+        <img src="img/maslut_white.png" alt="Maslut Logo" width="100" height="100">
    <p>&copy; 2025 Maslut Photography </p>
    <p> All rights reserved. </p>
    <a  href="https://www.instagram.com/maslut.id/"  style="color: rgb(168, 168, 168);">Follow me on Instagram &copy;maslut.id</a>

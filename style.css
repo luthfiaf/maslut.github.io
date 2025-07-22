@@ -2,14 +2,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "zen dots", "Oswald", "Montserrat", sans-serif;
+    font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-    color: #ffffff;
+  color: rgb(238, 238, 238);
 
 }
 
+
+
+.text {
+    font-size: 2rem; /* Ukuran font untuk desktop atau layar besar */
+    text-decoration: none;
+    color: white; /* Warna teks */
+    position: absolute; /* Agar teks muncul di atas gambar */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mengubah ukuran font untuk layar yang lebih kecil (mobile devices) */
+@media (max-width: 768px) {
+    .text {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk tampilan tablet atau ponsel */
+    }
+}
+
+/* Ukuran font lebih kecil lagi untuk tampilan ponsel sangat kecil */
+@media (max-width: 480px) {
+    .text {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk ponsel kecil */
+    }
+}
 
 
 
@@ -34,10 +61,36 @@ body {
 .navbar-brand {
     padding-left: 20px;
 }
+/* CSS untuk menyorot navbar yang aktif */
+.navbar .nav-link.active {
+    color: #3190de !important; /* Ganti warna ini sesuai dengan keinginan */
+}
+
+/* CSS untuk navbar yang tidak aktif (lebih redup) */
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.6); /* Warna lebih redup */
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00 !important; /* Warna terang saat hover */
+}
+
+
 
 main {
     padding: 0%;
     
+}
+
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0%;
+}
+
+.slide {
+    padding: 2%;
 }
 
 .container {
@@ -64,6 +117,52 @@ main {
             transition: all 0.3s ease; /* Efek transisi saat hover */
         }
 
+/* reservation form */
+   /* CSS custom untuk dropdown agar lebih terlihat */
+        select {
+            background-color: #fff;
+            border: 2px solid #007bff;
+            color: #000;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            appearance: none; /* Menghilangkan tampilan default browser */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Down_Arrow_Icon.svg/1024px-Down_Arrow_Icon.svg.png'); /* Menambahkan ikon panah */
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 40px;
+        }
+
+        select:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        option {
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+        }
+
+        option:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Styling untuk label dan text guide abu-abu di dalam form */
+        label, .form-text {
+            color: #868e96; /* Warna abu-abu untuk teks di dalam form */
+        }
+
+        .form-text {
+            font-size: 0.9rem; /* Ukuran font lebih kecil untuk guide */
+        }
+
+        .form-control {
+            margin-bottom: 1rem;
+        }
+
         /* footer */
 
 .no-underline {
@@ -75,3 +174,47 @@ main {
    .no-underline:hover {
        color: #25D366; /* Warna hijau khas WhatsApp atau sesuaikan warna sesuai kebutuhan */
    }
+
+
+   /* test */
+
+   /* Gaya untuk container gambar */
+.image-container {
+    position: relative;
+    width: 100%; /* Ubah sesuai ukuran yang diinginkan */
+    max-width: 600px; /* Contoh ukuran gambar */
+}
+
+/* Gaya untuk gambar */
+.image {
+    width: 100%; /* Membuat gambar responsif */
+    display: block;
+}
+
+/* Overlay yang muncul saat hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan gelap */
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease; /* Animasi transisi */
+}
+
+/* Teks yang akan muncul saat hover */
+.text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Efek saat hover */
+.image-container:hover .overlay {
+    opacity: 1;
+}
